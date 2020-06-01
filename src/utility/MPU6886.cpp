@@ -250,3 +250,12 @@ void MPU6886::getTempData(float *t){
   
   *t = (float)temp / 326.8 + 25.0;
 }
+
+void MPU6886::setIntActiveLow(){
+  uint8_t buf;  
+  I2C_Read_NBytes(MPU6886_ADDRESS, MPU6886_INT_PIN_CFG, 1, &buf);
+  
+  buf = buf | 0xc8;
+
+  I2C_Write_NBytes(MPU6886_ADDRESS, MPU6886_INT_PIN_CFG, 1, &buf);
+}
