@@ -112,7 +112,7 @@ public:
     void Write6BytesStorage( uint8_t *bufPtr );
 
     // Interrupts
-    void clearIRQ();
+    void ClearIRQ();
 
     
 private:
