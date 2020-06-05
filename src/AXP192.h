@@ -111,6 +111,9 @@ public:
     void Read6BytesStorage( uint8_t *bufPtr );
     void Write6BytesStorage( uint8_t *bufPtr );
 
+    // Interrupts
+    void clearIRQ();
+
     
 private:
     void Write1Byte( uint8_t Addr ,  uint8_t Data );

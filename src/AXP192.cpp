@@ -612,3 +612,10 @@ void AXP192::Write6BytesStorage( uint8_t *bufPtr )
     Wire1.write(bufPtr[5]);
     Wire1.endTransmission();
 }
+
+void AXP192::clearIRQ() {
+    uint8_t val = 0xFF;
+    for (int i = 0; i < 4; i++) {
+        Write1Byte(0x44 + i, val);
+    }
+}
