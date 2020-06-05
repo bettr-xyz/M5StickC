@@ -83,6 +83,8 @@ class MPU6886 {
 
       void getAhrsData(float *pitch,float *roll,float *yaw);
 
+      void setIntActiveLow();
+
     public:
       float aRes, gRes;
 
