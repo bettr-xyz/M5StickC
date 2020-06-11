@@ -618,4 +618,6 @@ void AXP192::ClearIRQ() {
     for (int i = 0; i < 4; i++) {
         Write1Byte(0x44 + i, val);
     }
+
+    Write1Byte(0x4d, val);
 }
